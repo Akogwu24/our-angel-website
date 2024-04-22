@@ -1,0 +1,15 @@
+export const PUBLIC_ROUTES = {
+  HOME: '/',
+  LOGIN: '/login',
+  PRODUCTS: '/products',
+  PRICING: '/pricing',
+  RESOURCES: '/resources',
+  STARTUPS: '/startups',
+  VALUATIONS: '/valuations',
+  INCORPORATION: '/incorporation',
+  FUND_MANAGEMENT: '/fund-management',
+  CAPTABLE: '/captable',
+  RAISE: '/raise',
+  INVEST_IN_VENTURE_FUNDS: '/invest-in-ventures',
+  FINANCE_REPORTING: '/finance-reporting',
+};
