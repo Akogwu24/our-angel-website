@@ -22,12 +22,12 @@ async function getData() {
 }
 
 export default async function Navbar() {
-  const data = await getData();
+  // const data = await getData();
 
-  console.log(data);
+  // console.log(data);
   return (
     <PageWrapper>
-      <Flex as='nav' justify='space-between' py='5'>
+      <Flex as='nav' justify='space-between' py='5' align={'center'}>
         <Link href={PUBLIC_ROUTES.HOME}>
           <Image src='/images/logo_black.svg' height={120} width={120} alt='logo' />
         </Link>

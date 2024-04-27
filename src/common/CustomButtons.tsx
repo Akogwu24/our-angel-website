@@ -8,7 +8,23 @@ interface IPrimaryButtonProps {
 
 export const PrimaryLightButton = ({ children, ...props }: IPrimaryButtonProps) => {
   return (
-    <Button bg='themeLightBlue' color='white' {...props}>
+    <Button bg='themeLightBlue' fontWeight={400} fontSize={14} borderRadius={3} color='white' {...props}>
+      {children}
+    </Button>
+  );
+};
+
+export const DarkPrimaryButton = ({ children, ...props }: IPrimaryButtonProps) => {
+  return (
+    <Button bg='themeDarkBlue' fontWeight={400} fontSize={14} borderRadius={3} color='white' {...props}>
+      {children}
+    </Button>
+  );
+};
+
+export const OutlinedButton = ({ children, ...props }: IPrimaryButtonProps) => {
+  return (
+    <Button variant={'outline'} fontWeight={400} fontSize={14} outline={'1px solid #012677'} borderRadius={3} color='themeDarkBlue' {...props}>
       {children}
     </Button>
   );

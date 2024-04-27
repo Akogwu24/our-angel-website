@@ -1,11 +1,15 @@
-import { PageWrapper } from '@/common/PageWrapper';
+import { Hero } from './components/Hero';
+import { InvestCards } from './components/InvestCard';
+import { RecentlyLaunched } from './components/RecentlyLaunched';
+import { WhatsNewOnOurAngel } from './components/WhatsNewOnOurAngel';
 
 export default function Home() {
   return (
     <main className=''>
-      <PageWrapper>
-        <h1 className='text-2xl'>Our angel website</h1>
-      </PageWrapper>
+      <Hero />
+      <InvestCards />
+      <RecentlyLaunched />
+      <WhatsNewOnOurAngel />
     </main>
   );
 }

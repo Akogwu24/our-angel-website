@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 body {
-  font-size: 14px;
   color: #475467;
   font-weight: 400;
+  width: 100vw;
+  overflow-x: hidden;
 }
