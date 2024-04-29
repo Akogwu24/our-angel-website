@@ -33,7 +33,7 @@ export default async function Navbar() {
         </Link>
 
         <HStack as={UnorderedList} styleType={'none'} gap='5' fontWeight={500}>
-          <ListItem>
+          <ListItem position={'relative'}>
             <ProductsPopOver />
           </ListItem>
           <ListItem as={Link} href={PUBLIC_ROUTES.PRICING}>

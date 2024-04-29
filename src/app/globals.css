@@ -8,3 +8,7 @@ body {
   width: 100vw;
   overflow-x: hidden;
 }
+
+.chakra-popover__popper {
+  transform: translate3d(-440px, 32px, 0px) !important;
+}
