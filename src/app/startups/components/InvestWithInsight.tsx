@@ -1,10 +1,7 @@
 import { PageWrapper } from '@/common/PageWrapper';
-import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, Flex, SimpleGrid, Stack, Text } from '@chakra-ui/react';
+import { Box, SimpleGrid, Stack, Text } from '@chakra-ui/react';
 import React from 'react';
-import { InvestWitInsightCard } from './InvestWitInsightCard';
-import { commonlyAskedQuestions } from './extras';
-import { PrimaryLightButton } from '@/common/CustomButtons';
-import { ArrowRight } from 'iconsax-react';
+import { InvestWitInsightCard } from '../../../common/InvestWitInsightCard';
 
 export function InvestWithInsight() {
   return (

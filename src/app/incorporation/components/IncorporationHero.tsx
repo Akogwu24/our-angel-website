@@ -1,5 +1,3 @@
-'use sever';
-
 import { PrimaryLightButton } from '@/common/CustomButtons';
 import Hero from '@/common/Hero';
 import { PageWrapper } from '@/common/PageWrapper';

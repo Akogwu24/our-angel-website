@@ -1,6 +1,6 @@
 import { Box, HStack, SimpleGrid, Stack, Text } from '@chakra-ui/react';
 import React from 'react';
-import { WhatsNewCard } from './WhatsNewCard';
+import { WhatsNewCard } from '../../common/WhatsNewCard';
 import { OutlinedButton, PrimaryLightButton } from '@/common/CustomButtons';
 import { ArrowRight } from 'iconsax-react';
 import { PageWrapper } from '@/common/PageWrapper';

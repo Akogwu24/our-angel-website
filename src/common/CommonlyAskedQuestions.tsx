@@ -1,11 +1,14 @@
 import React from 'react';
 import { PageWrapper } from './PageWrapper';
 import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Flex, Stack, Text } from '@chakra-ui/react';
-import { commonlyAskedQuestions } from '@/app/startups/components/extras';
 import { ArrowRight } from 'iconsax-react';
 import { PrimaryLightButton } from './CustomButtons';
 
-export function CommonlyAskedQuestions() {
+type TQuestionsProps = {
+  questions: { question: string; answer: string }[];
+};
+
+export function CommonlyAskedQuestions({ questions }: TQuestionsProps) {
   return (
     <PageWrapper>
       <Flex gap='1rem' px={'5%'}>
@@ -14,7 +17,7 @@ export function CommonlyAskedQuestions() {
         </Text>
 
         <Accordion as={Stack} spacing='8' mt='3rem' flex='1' mx='auto' allowToggle>
-          {commonlyAskedQuestions.map((que, index) => (
+          {questions.map((que, index) => (
             <AccordionItem key={index} border='none' borderRadius={'8px'} borderBottom='1px solid #eee'>
               <h2>
                 <AccordionButton bg=''>
