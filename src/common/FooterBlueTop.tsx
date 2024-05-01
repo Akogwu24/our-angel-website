@@ -12,7 +12,7 @@ type TFooterBlueTopProps = {
 
 export const FooterBlueTop = ({ heading, subheading, buttonText }: Partial<TFooterBlueTopProps>) => {
   return (
-    <HStack bg='extremethemeDarkBlue' pl={5} h={[350]} color='white' my={10}>
+    <HStack bg='extremethemeDarkBlue' pl={5} h={[320]} color='white' my={10}>
       <Stack flex='1' ml={'10%'} maxW='600px'>
         <Text textStyle={'h2'} fontSize={['2.5rem']} lineHeight={1.2} color='white'>
           {heading}
