@@ -12,3 +12,75 @@ body {
 .chakra-popover__popper {
   transform: translate3d(-440px, 32px, 0px) !important;
 }
+
+.progress-container {
+  width: 100%;
+}
+.progress-bar {
+  height: 3px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  /* margin-bottom: 10px; */
+  overflow: hidden;
+  position: relative;
+}
+.fill {
+  height: 100%;
+  width: 0;
+  background-color: #0246d8aa;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: fillAnimation 10s linear forwards;
+}
+@keyframes fillAnimation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.card {
+  display: block;
+  position: relative;
+  max-width: 300px;
+  max-height: 320px;
+  background-color: #f2f8f9;
+  border-radius: 10px;
+  margin: 12px;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #c3e6ec, #a7d1d9);
+}
+
+.card:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: -16px;
+  right: -16px;
+  background: linear-gradient(135deg, #364a60, #384c6c);
+  height: 32px;
+  width: 32px;
+  border-radius: 32px;
+  transform: scale(1);
+  transform-origin: 50% 50%;
+  transition: transform 0.35s ease-out;
+}
+
+.card:hover:before {
+  transform: scale(28);
+}
+
+.card:hover .small-desc {
+  transition: all 0.5s ease-out;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.card:hover .card-title {
+  transition: all 0.5s ease-out;
+  color: #ffffff;
+}

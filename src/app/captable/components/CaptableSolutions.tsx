@@ -1,7 +1,6 @@
-import { ListIcon, ListItem, Stack, Text, UnorderedList } from '@chakra-ui/react';
-import React, { useCallback } from 'react';
+import { Stack, Text } from '@chakra-ui/react';
+import React from 'react';
 import { ImageTextContainer } from './ImageTextContainer';
-import { GiCheckMark } from 'react-icons/gi';
 import { PageWrapper } from '@/common/PageWrapper';
 import { AutomatedCapTable } from './AuthomatedCaptable';
 
@@ -15,7 +14,7 @@ export function CaptableSolutions({}: typeCaptableSolutionsProps) {
           Cap Table Solutions Tailored to Your Needs
         </Text>
         <Text align={'center'} fontSize={18}>
-          Organize, track, and process payments for your company's securities.
+          Organize, track, and process payments for your company&apos;s securities.
         </Text>
         <Stack my={10} spacing={16}>
           <ImageTextContainer

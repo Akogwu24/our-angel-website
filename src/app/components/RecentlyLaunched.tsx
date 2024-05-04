@@ -7,6 +7,8 @@ import Image from 'next/image';
 import { PageWrapper } from '@/common/PageWrapper';
 import { fundManagerSlideImages, investorSlideImages, startupSlideImages, technologyTailored } from './extras';
 import DiscoverOurServicesTabContent from './DiscoverOurServicesTabContent';
+import ProgressbarLine from '@/common/ProgressbarLine';
+import { TechnologyTailoredForInvestors } from './TechnologyTailoredForInvestors';
 
 export const RecentlyLaunched = async () => {
   return (
@@ -63,28 +65,7 @@ export const RecentlyLaunched = async () => {
         </PageWrapper>
       </Box>
 
-      <PageWrapper>
-        <Stack my={20}>
-          <Text textStyle={'h2'} fontSize={'2.5rem'}>
-            Technology Tailored for Investors
-          </Text>
-          <Flex h={550} my={5} justify={'space-between'} gap={'2rem'} align='center'>
-            <Stack flex='1' maxW='650px'>
-              {technologyTailored.map((item, i) => (
-                <Box key={i} borderBottom={'1px #ddd solid'} py={3}>
-                  <Text textStyle={'h3'} fontWeight={500} fontSize={'1.2rem'} lineHeight={2.4}>
-                    {item.heading}
-                  </Text>
-                  <Text fontSize={15}>{item.subheading}</Text>
-                </Box>
-              ))}
-            </Stack>
-            <Box pos={'relative'} h='full' flex={1}>
-              <Image fill src='/images/home/Content2.svg' alt='group' />
-            </Box>
-          </Flex>
-        </Stack>
-      </PageWrapper>
+      <TechnologyTailoredForInvestors />
 
       <PageWrapper>
         <Stack my={10} borderRadius={10} p={10} bg='#F3F2EE' align='center'>
