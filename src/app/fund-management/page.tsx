@@ -4,15 +4,16 @@ import { Stack } from '@chakra-ui/react';
 import React from 'react';
 import FundManagerHero from './components/FundManagerHero';
 import { FeaturesForSuccess } from './components/FeaturesForSuccess';
-import { HowItWorks } from './components/HowItWorks';
 import { commonlyAskedQuestions } from '../startups/components/extras';
+import { ProgressBottomBorderWithSwappingImages } from '@/common/ProgressBottomBorderWithSwappingImages';
+import { fundSwappedImages, howItWorks } from './components/extras';
 
 export default function FundManagementPage() {
   return (
     <Stack as='main'>
       <FundManagerHero />
       <FeaturesForSuccess />
-      <HowItWorks />
+      <ProgressBottomBorderWithSwappingImages sectionHeading='How It Works' data={howItWorks} images={fundSwappedImages} />
       <CommonlyAskedQuestions questions={commonlyAskedQuestions} />
       <FooterBlueTop
         heading='Ready to Transform Your Fund Management?'

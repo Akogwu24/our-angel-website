@@ -1,7 +1,9 @@
 import { InvestWitInsightCard } from '@/common/InvestWitInsightCard';
 import { PageWrapper } from '@/common/PageWrapper';
+import { ProgressBottomBorderWithSwappingImages } from '@/common/ProgressBottomBorderWithSwappingImages';
 import { Box, SimpleGrid, Stack, Text } from '@chakra-ui/react';
 import React from 'react';
+import { fundSwappedImages, howItWorks } from './extras';
 
 export function FeaturesForSuccess() {
   return (

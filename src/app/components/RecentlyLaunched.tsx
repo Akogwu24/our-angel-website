@@ -5,10 +5,9 @@ import React from 'react';
 import { RecentLaunchCard } from './RecentLaunchCard';
 import Image from 'next/image';
 import { PageWrapper } from '@/common/PageWrapper';
-import { fundManagerSlideImages, investorSlideImages, startupSlideImages, technologyTailored } from './extras';
+import { fundManagerSlideImages, investorSlideImages, startupSlideImages, swappedImages, technologyTailored } from './extras';
 import DiscoverOurServicesTabContent from './DiscoverOurServicesTabContent';
-import ProgressbarLine from '@/common/ProgressbarLine';
-import { TechnologyTailoredForInvestors } from './TechnologyTailoredForInvestors';
+import { ProgressBottomBorderWithSwappingImages } from '@/common/ProgressBottomBorderWithSwappingImages';
 
 export const RecentlyLaunched = async () => {
   return (
@@ -64,8 +63,8 @@ export const RecentlyLaunched = async () => {
           </Flex>
         </PageWrapper>
       </Box>
-
-      <TechnologyTailoredForInvestors />
+      <ProgressBottomBorderWithSwappingImages sectionHeading='Technology Tailored for Investors' data={technologyTailored} images={swappedImages} />
+      {/* <TechnologyTailoredForInvestors /> */}
 
       <PageWrapper>
         <Stack my={10} borderRadius={10} p={10} bg='#F3F2EE' align='center'>
