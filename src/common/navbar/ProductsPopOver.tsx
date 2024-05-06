@@ -1,6 +1,6 @@
 'use client';
 
-import { Flex, Popover, PopoverArrow, PopoverBody, PopoverCloseButton, PopoverContent, PopoverTrigger, Portal, SimpleGrid, Text, useDisclosure } from '@chakra-ui/react';
+import { Flex, Popover, PopoverBody, PopoverCloseButton, PopoverContent, PopoverTrigger, SimpleGrid, Text, useDisclosure } from '@chakra-ui/react';
 import FeaturedToolCard from './FeaturedToolCard';
 import { GetStartedVideo } from './GetStartedVideo';
 import { featuredTools } from './extras';
@@ -13,6 +13,7 @@ export const ProductsPopOver = () => {
 
   useEffect(() => {
     onClose();
+    //eslint-disable-next-line
   }, [pathname]);
 
   return (

@@ -47,7 +47,7 @@ export function ValuationsHero() {
               <Text textStyle={'h2'}>Invest in Promising Startups</Text>
               <Text>
                 Get reliable 409A Valuations that seamlessly integrate into your
-                <br /> company's profile
+                <br /> company&#39;s profile
               </Text>
             </Box>
           </Flex>
@@ -71,7 +71,7 @@ export function ValuationsHero() {
               <Text textStyle={'h2'}>Detailed and Transparent Reports</Text>
               <Text>
                 At OurAngel, we believe that transparency is a cornerstone of accurate and reliable 409A valuations.
-                <br /> That's why we provide clear and comprehensive reports, explaining our methodology and assumptions in detail. 
+                <br /> That&#39;s why we provide clear and comprehensive reports, explaining our methodology and assumptions in detail. 
               </Text>
             </Box>
           </Flex>
