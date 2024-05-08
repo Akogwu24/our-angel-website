@@ -15,17 +15,33 @@ export const RecentlyLaunched = async () => {
       <PageWrapper>
         <HStack justify={'space-between'}>
           <Text textStyle={'h2'}>Recently Launched </Text>
-          <OutlinedButton rightIcon={<ArrowRight />}>View</OutlinedButton>
+          <OutlinedButton display={['none', 'none', 'flex']} rightIcon={<ArrowRight />}>
+            View
+          </OutlinedButton>
+          <OutlinedButton size='sm' display={['block', 'block', 'none']}>
+            <ArrowRight size={18} />
+          </OutlinedButton>
         </HStack>
-        <SimpleGrid columns={[3]} gap='2rem' my={4}>
-          {[...Array(3)].map((item, i) => (
+
+        <SimpleGrid display={['grid', 'grid', 'none']} gap='2rem' my={4}>
+          {[...Array(1)].map((_, i) => (
+            <RecentLaunchCard key={i} />
+          ))}
+        </SimpleGrid>
+        <SimpleGrid display={['none', 'none', 'grid', 'none']} columns={[2]} gap='2rem' my={4}>
+          {[...Array(2)].map((_, i) => (
+            <RecentLaunchCard key={i} />
+          ))}
+        </SimpleGrid>
+        <SimpleGrid display={['none', 'none', 'none', 'grid']} columns={[3]} gap='2rem' my={4}>
+          {[...Array(3)].map((_, i) => (
             <RecentLaunchCard key={i} />
           ))}
         </SimpleGrid>
 
-        <Flex my={20} h={500} align={'center'}>
-          <Box pos={'relative'} h='full' flex={1}>
-            <Image fill src='/images/home/Group.svg' alt='group' />
+        <Flex my={20} gap='2rem' align={'center'} direction={['column', 'column', 'row']}>
+          <Box h='full' flex={1}>
+            <Image height={100} width={100} src='/images/home/Group.svg' alt='group' className='h-[400px] lg:h-[500px] w-full' />
           </Box>
           <Stack flex='1' maxW='600px'>
             <Text fontSize={15} color='gray.500'>
@@ -35,9 +51,9 @@ export const RecentlyLaunched = async () => {
               Strategically Diversify <br /> Across Sectors and Stages
             </Text>
             <Text>
-              Maximize your potential returns by diversifying your investments across multiple sectors and stages. From early-stage startups in the vibrant fintech world
-              to established ventures in the rapidly evolving AI and biotech industries, OurAngels makes it easy to build a resilient and dynamic portfolio that balances
-              risk and reward.
+              Maximize your potential returns by diversifying your investments across multiple sectors and stages. From early-stage startups in the
+              vibrant fintech world to established ventures in the rapidly evolving AI and biotech industries, OurAngels makes it easy to build a
+              resilient and dynamic portfolio that balances risk and reward.
             </Text>
           </Stack>
         </Flex>
@@ -45,20 +61,20 @@ export const RecentlyLaunched = async () => {
 
       <Box bg='#80AB821A' my={5}>
         <PageWrapper>
-          <Flex my={10} py={5} px={5} h={500} align={'center'}>
-            <Stack flex='1' maxW='500px'>
-              <Text textStyle={'h2'} fontSize={'2.5rem'} lineHeight={1.2}>
+          <Flex my={10} py={5} px={[2, 5]} gap='2rem' align={'center'} direction={['column-reverse', 'column-reverse', 'row']}>
+            <Stack flex='1' maxW={['full', 'full']}>
+              <Text textStyle={'h2'} lineHeight={1.2}>
                 Back Winning Teams: Invest Where It Counts
               </Text>
               <Text>
-                Every startup on OurAngel undergoes a rigorous vetting process, ensuring you&apos;re investing in companies with not just groundbreaking ideas but also
-                solid business models, strong teams, and the potential for substantial growth. Our comprehensive evaluation process means you&apos;re backing ventures
-                ready to make an impact.
+                Every startup on OurAngel undergoes a rigorous vetting process, ensuring you&apos;re investing in companies with not just
+                groundbreaking ideas but also solid business models, strong teams, and the potential for substantial growth. Our comprehensive
+                evaluation process means you&apos;re backing ventures ready to make an impact.
               </Text>
             </Stack>
 
-            <Box pos={'relative'} h='full' flex={1}>
-              <Image fill src='/images/home/back-winning-teams.svg' alt='group' />
+            <Box h='full' flex={1}>
+              <Image src='/images/home/back-winning-teams.svg' alt='group' height={100} width={100} className='h-full lg:h-[500px] w-full' />
             </Box>
           </Flex>
         </PageWrapper>
@@ -67,17 +83,28 @@ export const RecentlyLaunched = async () => {
       {/* <TechnologyTailoredForInvestors /> */}
 
       <PageWrapper>
-        <Stack my={10} borderRadius={10} p={10} bg='#F3F2EE' align='center'>
-          <Text textStyle={'h2'} fontSize={'2.2rem'} fontWeight={500}>
+        <Stack my={[0, 10]} borderRadius={10} p={[5, 10]} bg='#F3F2EE' align='center'>
+          <Text textStyle={'h2'} fontWeight={500}>
             Discover Our Services
           </Text>
           <Text align='center' maxW='800px'>
-            At Ourangels, we cater to a diverse community of startups, investors, and fund managers, offering specialized services to meet the unique needs of each.
-            Explore what we can do for you:
+            At Ourangels, we cater to a diverse community of startups, investors, and fund managers, offering specialized services to meet the unique
+            needs of each. Explore what we can do for you:
           </Text>
 
           <Tabs variant='soft-rounded' w='full'>
-            <TabList bg='#13213E' mx='auto' justifyContent={'center'} w='fit-content' borderRadius={24} color='white' h='50px' p={1.5} my={5}>
+            <TabList
+              bg='#13213E'
+              mx='auto'
+              justifyContent={['space-betwen', 'center']}
+              justifyItems={'center'}
+              w={['full', 'fit-content']}
+              borderRadius={24}
+              color='white'
+              h='50px'
+              p={1.5}
+              my={5}
+            >
               <Tab {...tabStyles}>Startups</Tab>
               <Tab {...tabStyles}>Investors</Tab>
               <Tab {...tabStyles}>Fund managers</Tab>
@@ -85,7 +112,11 @@ export const RecentlyLaunched = async () => {
 
             <TabPanels>
               <TabPanel>
-                <DiscoverOurServicesTabContent heading='Startup' subheading='Manage equity, raise funds, access 409A valuations' images={startupSlideImages || []} />
+                <DiscoverOurServicesTabContent
+                  heading='Startup'
+                  subheading='Manage equity, raise funds, access 409A valuations'
+                  images={startupSlideImages || []}
+                />
               </TabPanel>
               <TabPanel>
                 <DiscoverOurServicesTabContent
@@ -112,8 +143,8 @@ export const RecentlyLaunched = async () => {
 const tabStyles = {
   border: 0,
   fontWeight: '500',
-  fontSize: 15,
-  px: 5,
+  fontSize: [14, 15],
+  px: [2, 3, 5],
   color: 'white',
   _selected: { color: '#333', bg: 'white', borderRadius: 20 },
 };

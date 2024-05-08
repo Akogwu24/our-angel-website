@@ -44,10 +44,8 @@ export function ProgressBottomBorderWithSwappingImages({ images, data, sectionHe
   return (
     <PageWrapper>
       <Stack my={20}>
-        <Text textStyle={'h2'} fontSize={'2.5rem'}>
-          {sectionHeading || 'Technology Tailored for Investors'}
-        </Text>
-        <Flex h={550} my={5} justify={'space-between'} gap={'5rem'} align='center'>
+        <Text textStyle={'h2'}>{sectionHeading || 'Technology Tailored for Investors'}</Text>
+        <Flex mb={5} justify={'space-between'} gap={'5rem'} align='center' direction={['column', 'column', 'column', 'row']}>
           <Stack flex='1' maxW='650px' spacing={3}>
             {data.map((item, i) => (
               <Flex key={i} align={'center'} gap='1rem'>
@@ -63,7 +61,7 @@ export function ProgressBottomBorderWithSwappingImages({ images, data, sectionHe
 
                 <Stack w='full'>
                   <Box key={i} pt={3} opacity={startFill === i ? 1 : 0.4}>
-                    <Text textStyle={'h3'} fontWeight={500} fontSize={'1.2rem'} lineHeight={2.4}>
+                    <Text textStyle={'h3'} fontWeight={500} fontSize={['1.2rem']} my={2}>
                       {item.heading}
                     </Text>
                     <Text fontSize={15}>{item.subheading}</Text>

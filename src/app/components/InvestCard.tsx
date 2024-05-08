@@ -1,7 +1,7 @@
 'use client';
 
 import { DarkPrimaryButton } from '@/common/CustomButtons';
-import { Flex, Icon, Stack, Text } from '@chakra-ui/react';
+import { Flex, Icon, SimpleGrid, Stack, Text } from '@chakra-ui/react';
 import { Building4, Icon as IconSaxIconType } from 'iconsax-react';
 import React from 'react';
 import { IconType } from 'react-icons/lib';
@@ -16,7 +16,7 @@ type TSingleInvestCard = {
 
 const SingleInvestCard = ({ icon, heading, subheading }: TSingleInvestCard) => {
   return (
-    <Flex bg='gray.50' p={10} borderRadius={5} shadow={'sm'}>
+    <Flex bg='gray.50' p={[5, 8, 10]} borderRadius={5} shadow={'sm'}>
       <Stack>
         <Icon as={icon || Building4} bg='gray.100' color='themeLightBlue' boxSize={10} p={2} borderRadius={4} />
         <Text textStyle='h2'>{heading}</Text>
@@ -32,7 +32,7 @@ const SingleInvestCard = ({ icon, heading, subheading }: TSingleInvestCard) => {
 export const InvestCards = () => {
   return (
     <PageWrapper>
-      <Flex gap='2rem' py={10} my={8}>
+      <SimpleGrid gap='2rem' py={10} my={8} minChildWidth={300}>
         <SingleInvestCard
           icon={Building4}
           heading='Invest in startups'
@@ -43,7 +43,7 @@ export const InvestCards = () => {
           heading='Invest in funds'
           subheading='Broaden your investment horizon with curated funds. Enjoy diversified exposure managed by industry experts, simplifying your journey towards impactful returns. '
         />
-      </Flex>
+      </SimpleGrid>
     </PageWrapper>
   );
 };

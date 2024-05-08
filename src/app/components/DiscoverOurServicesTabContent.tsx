@@ -28,7 +28,7 @@ export default function DiscoverOurServicesTabContent({ heading, images, subhead
   };
 
   return (
-    <Flex maxW='1000px' mx='auto' gap='2rem' h='300' align='center' justify='space-between'>
+    <Flex maxW='1000px' w='full' mx='auto' gap={[0, '2rem']} h={[450, '300']} align='center' justify='space-between' direction={['column', 'row']}>
       <Stack flex='1'>
         <Text textStyle='h2'>{heading}</Text>
         <Text>{subheading}</Text>
@@ -37,11 +37,11 @@ export default function DiscoverOurServicesTabContent({ heading, images, subhead
         </DarkPrimaryButton>
       </Stack>
 
-      <Box flex='1' w='380' h='300' overflow={'hidden'}>
+      <Box flex='1' w={['300px', '380px']} h={['300px']} pos={'relative'} overflow={'hidden'}>
         <Slider {...settings}>
           {images?.map((img) => (
-            <Flex key={img} mx='1rem'>
-              <Image mx='1rem' objectFit={'cover'} w='full' h='full' alt='img' src={img} />
+            <Flex key={img}>
+              <Image objectFit={'cover'} w='full' h='full' alt='img' src={img} />
             </Flex>
           ))}
         </Slider>

@@ -12,11 +12,14 @@ export function WhatsNewOnOurAngel() {
       <Stack as='section' my={10}>
         <HStack justify={'space-between'} my={'1rem'}>
           <Text textStyle={'h2'}>What’s New On OurAngel </Text>
-          <OutlinedButton size='sm' rightIcon={<ArrowRight />}>
+          <OutlinedButton size='sm' rightIcon={<ArrowRight />} display={['none', 'none', 'flex']}>
             View
           </OutlinedButton>
+          <OutlinedButton size='sm' display={['block', 'block', 'none']}>
+            <ArrowRight size={18} />
+          </OutlinedButton>
         </HStack>
-        <SimpleGrid columns={[3]} gap='2rem'>
+        <SimpleGrid minChildWidth={[280]} gap='2rem'>
           <WhatsNewCard
             image='/images/home/what-new1.png'
             heading='Make everyday a payday'
@@ -35,10 +38,10 @@ export function WhatsNewOnOurAngel() {
         </SimpleGrid>
       </Stack>
 
-      <HStack bg='extremethemeDarkBlue' pl={5} pt={5} h={[350]} color='white' my={10} borderRadius={5}>
+      <HStack pos={'relative'} bg='extremethemeDarkBlue' pl={[0, 5]} pt={[0, 5]} h={[300, 350]} color='white' my={10} borderRadius={5}>
         <Stack flex='1' ml={'5%'}>
           <Text>Build With OurAngel</Text>
-          <Text textStyle={'h2'} fontSize={['2.5rem']} lineHeight={1.2} color='white'>
+          <Text textStyle={'h2'} fontSize={['2.5rem']} lineHeight={[1.1, 1.2]} color='white'>
             Join the next generation of <br /> builders
           </Text>
           <PrimaryLightButton w={150} color='themeLightBlue' bg='white'>
@@ -46,7 +49,13 @@ export function WhatsNewOnOurAngel() {
           </PrimaryLightButton>
         </Stack>
 
-        <Image className='h-[250px] w-[600px] self-end self' alt='Build With OurAngel' width={400} height={300} src='/images/home/Group 5379.png' />
+        <Image
+          className='h-[250px] w-[300px] lg:w-[400px]  xl:w-[600px] self-end self absolute md:static'
+          alt='Build With OurAngel'
+          width={400}
+          height={300}
+          src='/images/home/Group 5379.png'
+        />
       </HStack>
     </PageWrapper>
   );

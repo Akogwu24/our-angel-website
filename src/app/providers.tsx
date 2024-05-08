@@ -16,14 +16,14 @@ export function Providers({ children }: { children: React.ReactNode }) {
     textStyles: {
       h1: {
         color: '#121212',
-        fontWeight: '400',
-        fontSize: '50px',
+        fontWeight: '500',
+        fontSize: ['2.3rem', '2.5rem', '50px'],
         lineHeight: 1.2,
       },
       h2: {
         color: '#121212',
         fontWeight: '500',
-        fontSize: '32px',
+        fontSize: ['25px', '28px', '32px', '38px'],
       },
       h3: {
         color: '#121212',

@@ -1,6 +1,17 @@
 'use client';
 
-import { Flex, Popover, PopoverBody, PopoverCloseButton, PopoverContent, PopoverTrigger, SimpleGrid, Text, useDisclosure } from '@chakra-ui/react';
+import {
+  Flex,
+  Popover,
+  PopoverBody,
+  PopoverCloseButton,
+  PopoverContent,
+  PopoverTrigger,
+  Portal,
+  SimpleGrid,
+  Text,
+  useDisclosure,
+} from '@chakra-ui/react';
 import FeaturedToolCard from './FeaturedToolCard';
 import { GetStartedVideo } from './GetStartedVideo';
 import { featuredTools } from './extras';
@@ -18,7 +29,7 @@ export const ProductsPopOver = () => {
 
   return (
     <>
-      <Popover placement='bottom' isOpen={isOpen} onClose={onClose}>
+      <Popover placement='bottom' isOpen={isOpen} onClose={onClose} closeOnBlur={false}>
         <PopoverTrigger>
           <Text onClick={onToggle} cursor={'pointer'}>
             Products

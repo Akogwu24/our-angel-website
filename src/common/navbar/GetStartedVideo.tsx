@@ -4,24 +4,23 @@ import { Icon } from '@chakra-ui/icon';
 import { Box, HStack, Text } from '@chakra-ui/layout';
 import { PlayCircle } from 'iconsax-react';
 import React, { useEffect, useRef } from 'react';
+import ReactPlayer from 'react-player';
 
 export function GetStartedVideo() {
-  //   const videoRef = useRef(null);
-  //   useEffect(() => {
-  //     const video = videoRef.current;
+  const videoRef = useRef(null);
+  // useEffect(() => {
+  //   // Add event listener to play video when it's ready
+  //   videoRef.current?.addEventListener('loadeddata', () => {
+  //     videoRef.current?.play();
+  //   });
 
-  //     // Add event listener to play video when it's ready
-  //     video?.addEventListener('loadeddata', () => {
-  //       video?.play();
+  //   return () => {
+  //     // Cleanup: Remove event listener when component unmounts
+  //     videoRef.current?.removeEventListener('loadeddata', () => {
+  //       videoRef.current?.play();
   //     });
-
-  //     return () => {
-  //       // Cleanup: Remove event listener when component unmounts
-  //       video?.removeEventListener('loadeddata', () => {
-  //         video?.play();
-  //       });
-  //     };
-  //   }, []);
+  //   };
+  // }, []);
 
   return (
     <Box w='200px'>
@@ -43,11 +42,23 @@ export function GetStartedVideo() {
         <Icon as={PlayCircle} />
         <Text as='small'>Watch video</Text>
       </HStack>
-
-      {/* // <video ref={videoRef} width='100' height='100' controls>
-    //   <source src='https://www.youtube.com/watch?v=8Ij7A1VCB7I' type='video/mp4' />
-    //   Your browser does not support the video tag.
-    // </video> */}
+      {/* <ReactPlayer
+        // controls={true}
+        ref={videoRef}
+        playIcon={<PlayCircle />}
+        light={true}
+        width={'100%'}
+        height={'230px'}
+        url={'https:www.youtube.com/watch?v=8Ij7A1VCB7I'}
+      />
+      <HStack color='rebeccapurple' pt={4} onClick={() => videoRef?.current?.play()}>
+        <Icon as={PlayCircle} />
+        <Text as='small'>Watch video</Text>
+      </HStack> */}
+      {/* <video ref={videoRef} width='100' height='100' controls>
+        <source src='https:www.youtube.com/watch?v=8Ij7A1VCB7I' type='video/mp4' />
+        Your browser does not support the video tag.
+      </video> */}
     </Box>
   );
 }
