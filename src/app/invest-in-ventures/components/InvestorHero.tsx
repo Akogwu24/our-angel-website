@@ -9,7 +9,7 @@ export function InvestorHero() {
   return (
     <Box bg='rgba(238, 243, 253, 1)'>
       <PageWrapper>
-        <Stack spacing={5} w='full' alignItems={'center'} p={10} pb={0}>
+        <Stack spacing={5} w='full' alignItems={'center'} p={[0, 2, 5, 10]} pb={0}>
           <Text textStyle='h1' mt={5}>
             Invest In Venture Funds
           </Text>

@@ -1,20 +1,18 @@
 import { InvestWitInsightCard } from '@/common/InvestWitInsightCard';
 import { PageWrapper } from '@/common/PageWrapper';
-import { ProgressBottomBorderWithSwappingImages } from '@/common/ProgressBottomBorderWithSwappingImages';
 import { Box, SimpleGrid, Stack, Text } from '@chakra-ui/react';
 import React from 'react';
-import { fundSwappedImages, howItWorks } from './extras';
 
 export function FeaturesForSuccess() {
   return (
     <Box as='section' bg='black' color='white' my={20}>
       <PageWrapper>
-        <Stack p={10} px={5} my={5}>
+        <Stack p={10} px={[0, 2, 4, 5]} my={5}>
           <Text textStyle='h2' color='white' align='center' fontSize={'2.2rem'}>
             Features Designed for Success
           </Text>
 
-          <SimpleGrid columns={[2]} gap='2rem' my={5}>
+          <SimpleGrid columns={[1, 1, 2]} gap='2rem' my={5}>
             <InvestWitInsightCard
               heading='Raise Funds Efficiently'
               subheading=' With Ourangels, access a broad network of eager investors. Our platform makes it easy to present your fund, communicate its value proposition, and close the deal.'

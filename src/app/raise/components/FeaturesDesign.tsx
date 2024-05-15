@@ -12,7 +12,7 @@ export function FeaturesDesign() {
             Features Designed for Success
           </Text>
 
-          <SimpleGrid columns={[2]} gap='2rem' my={5}>
+          <SimpleGrid columns={[1, 1, 2]} gap='2rem' my={5}>
             <InvestWitInsightCard
               heading='Accurate Valuations'
               subheading="Determine your company's valuation and use that data to engage the most proactive investors in your industry."

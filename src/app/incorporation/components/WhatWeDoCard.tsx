@@ -31,7 +31,7 @@ export const WhatWeDo = () => {
       <Text mt={10} textStyle={'h2'}>
         What we do
       </Text>
-      <SimpleGrid as='section' columns={[4]} gap='2rem' justifyItems={'center'}>
+      <SimpleGrid as='section' w='full' minChildWidth={250} gap='2rem' rowGap={['3rem']} justifyItems={'center'}>
         <WhatWeDoCard
           icon={Notepad2}
           head='Easy Business Registration'
@@ -47,7 +47,11 @@ export const WhatWeDo = () => {
           head='Fundraising and Management'
           subheading='Easily generate data rooms, distribute SAFEs, and oversee equity rounds while ensuring automatic cap table updates as funds come in.'
         />
-        <WhatWeDoCard icon={BiMessageRoundedDots} head='Expert Guidance' subheading='Let us handle the complexities, so you can focus on building your business.' />
+        <WhatWeDoCard
+          icon={BiMessageRoundedDots}
+          head='Expert Guidance'
+          subheading='Let us handle the complexities, so you can focus on building your business.'
+        />
       </SimpleGrid>
       <PrimaryLightButton mb={5} rightIcon={<ArrowRight />} w={200}>
         Get Registered Today!

@@ -12,7 +12,7 @@ export default function CaptablePage() {
       <CaptableHero />
       <CaptableSolutions />
       <CommonlyAskedQuestions questions={captableCommonlyaskedQuestions} />
-      <FooterBlueTop heading='Ready to Invest in Innovation?' buttonText='Start investing' />
+      <FooterBlueTop h={[300]} heading='Ready to Invest in Innovation?' buttonText='Start investing' />
     </Stack>
   );
 }

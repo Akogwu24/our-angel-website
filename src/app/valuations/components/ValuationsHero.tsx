@@ -10,7 +10,7 @@ export function ValuationsHero() {
   return (
     <>
       <Stack bg='extremelyLightGrayBG'>
-        <Box ml={'12%'}>
+        <Box ml={[0, '4%', '12%']} p={[5, 5, 0]}>
           <Hero
             heading='Audit-Ready 409a Valuations'
             subheading='Fast, Accurate & Compliant'
@@ -20,7 +20,7 @@ export function ValuationsHero() {
           />
         </Box>
       </Stack>
-      <SimpleGrid my={16} columns={[3]} gap='2rem' justifyItems={'center'}>
+      <SimpleGrid my={16} minChildWidth={[250]} gap='2rem' justifyItems={'center'}>
         <VentureBlock
           imagePath='/images/valuations/Featured icon (3).svg'
           heading='Personalized Assessments'
@@ -40,8 +40,10 @@ export function ValuationsHero() {
 
       <Box as='section' my={10}>
         <PageWrapper as={Stack} spacing={10}>
-          <Flex align={'center'} justify='center' gap='2rem'>
-            <Image width={100} height={100} alt='...' src='/images/valuations/promising.svg' className='flex-1' />
+          <Flex align={'center'} justify='center' gap='2rem' direction={['column-reverse', 'column-reverse', 'row']}>
+            <Box flex='1'>
+              <Image width={100} height={100} alt='...' src='/images/valuations/promising.svg' className='flex-1 w-full h-full' />
+            </Box>
 
             <Box flex='1' maxW='600px'>
               <Text textStyle={'h2'}>Invest in Promising Startups</Text>
@@ -52,7 +54,7 @@ export function ValuationsHero() {
             </Box>
           </Flex>
 
-          <Flex align={'center'} justify='center' gap='2rem' py={10} mt={10}>
+          <Flex align={'center'} justify='center' gap='2rem' py={10} mt={10} direction={['column', 'column', 'row']}>
             <Box flex='1' maxW='600px'>
               <Text textStyle={'h2'}>First-hand Industry Knowledge</Text>
               <Text>
@@ -61,11 +63,15 @@ export function ValuationsHero() {
               </Text>
             </Box>
 
-            <Image width={100} height={100} alt='...' src='/images/valuations/promising2.svg' className='flex-1' />
+            <Box flex='1'>
+              <Image width={100} height={100} alt='...' src='/images/valuations/promising2.svg' className='w-full h-full' />
+            </Box>
           </Flex>
 
-          <Flex align={'center'} justify='center' gap='2rem' py={10} mb={10}>
-            <Image width={100} height={100} alt='...' src='/images/valuations/promising1.svg' className='flex-1' />
+          <Flex align={'center'} justify='center' gap='2rem' py={10} mb={10} direction={['column-reverse', 'column-reverse', 'row']}>
+            <Box flex='1'>
+              <Image width={100} height={100} alt='...' src='/images/valuations/promising1.svg' className='w-full h-full' />
+            </Box>
 
             <Box flex='1' maxW='600px'>
               <Text textStyle={'h2'}>Detailed and Transparent Reports</Text>

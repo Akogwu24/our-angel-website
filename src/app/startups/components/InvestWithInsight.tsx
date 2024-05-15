@@ -13,10 +13,10 @@ export function InvestWithInsight() {
               Invest with Insight: Our Rigorous Startup Vetting Process
             </Text>
             <Text maxW='1000px'>
-              At Ourangels, your investment confidence is our priority. We meticulously vet every startup in our portfolio through a robust process that combines
-              third-party analyses with our own in-depth research. <br /> Our approach focuses on three core areas:
+              At Ourangels, your investment confidence is our priority. We meticulously vet every startup in our portfolio through a robust process
+              that combines third-party analyses with our own in-depth research. <br /> Our approach focuses on three core areas:
             </Text>
-            <SimpleGrid columns={[3]} gap='2rem' my={5}>
+            <SimpleGrid minChildWidth={250} gap='2rem' my={5}>
               <InvestWitInsightCard
                 heading='Technological Edge'
                 subheading="We ensure each startup's technology is not just innovative but has the potential to lead its industry, offering scalable solutions that meet tomorrow's needs."

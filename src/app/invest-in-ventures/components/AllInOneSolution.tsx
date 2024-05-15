@@ -1,12 +1,8 @@
-'use client';
-
-import { WhatWeDoCard } from '@/app/incorporation/components/WhatWeDoCard';
 import { PrimaryLightButton } from '@/common/CustomButtons';
 import { PageWrapper } from '@/common/PageWrapper';
 import { Box, SimpleGrid, Stack, Text } from '@chakra-ui/react';
-import { ArrowRight, Diagram, Graph, Notepad2 } from 'iconsax-react';
+import { ArrowRight } from 'iconsax-react';
 import React from 'react';
-import { BiMessageRoundedDots } from 'react-icons/bi';
 import { AllInOneSolutionCard } from './AllInOneSolutionCard';
 
 export function AllInOneSolution() {
@@ -14,7 +10,7 @@ export function AllInOneSolution() {
     <PageWrapper>
       <Stack my={10} align={'center'} spacing={10}>
         <Box mt={10}>
-          <Text textStyle={'h2'} lineHeight={2}>
+          <Text textStyle={'h2'} lineHeight={2} align={['center']}>
             Your All-In-One Solution for Startup Investment
           </Text>
           <Text align={'center'}>
@@ -22,7 +18,7 @@ export function AllInOneSolution() {
             <br /> mirrors your unique goals and preferences.
           </Text>
         </Box>
-        <SimpleGrid as='section' my={3} columns={[3]} gap='2rem'>
+        <SimpleGrid as='section' w='full' my={3} minChildWidth={[220]} gap='2rem'>
           <AllInOneSolutionCard
             img={'/images/invest-in-ventures/Featured1.svg'}
             head='Simplified Investment Process'

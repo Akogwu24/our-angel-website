@@ -5,7 +5,7 @@ import { ArrowRight } from 'iconsax-react';
 import Image from 'next/image';
 import React from 'react';
 
-export function RaoseHero() {
+export function RaiseHero() {
   return (
     <PageWrapper>
       <Stack>
@@ -18,11 +18,11 @@ export function RaoseHero() {
       </Stack>
 
       <Box as='section' my={20}>
-        <Text textStyle={'h2'} fontSize={'2.2rem'} align={'center'} my={10}>
+        <Text textStyle={'h2'} fontSize={['2rem', '2.5rem']} align={'center'} my={10}>
           Fully Integrated Support For Startup founders
         </Text>
         <Stack spacing={20}>
-          <Flex align={'center'} justify='center' gap='2rem'>
+          <Flex align={'center'} justify='center' gap='2rem' direction={['column', 'column', 'row']}>
             <Box flex='1' maxW='600px'>
               <Text textStyle={'h2'}>Simplify Your Fundraising Experience</Text>
               <Text>
@@ -31,27 +31,37 @@ export function RaoseHero() {
               </Text>
             </Box>
 
-            <Image width={100} height={100} alt='...' src='/images/raise/simplify.svg' className='flex-1 rounded-xl' />
-          </Flex>
-
-          <Flex align={'center'} justify='center' gap='3rem'>
-            <Image width={100} height={100} alt='...' src='/images/raise/customize.svg' className='flex-1 rounded-xl' />
-
-            <Box flex='1' maxW='600px'>
-              <Text textStyle={'h2'}>Customize your Raise to Meet your needs</Text>
-              <Text>Explore flexible fund raising options and customize them to meet the unique needs of your startup, from pre-seed to Series C.</Text>
+            <Box flex='1'>
+              <Image width={200} height={200} alt='...' src='/images/raise/simplify.svg' className='rounded-xl h-full w-full' />
             </Box>
           </Flex>
 
-          <Flex align={'center'} justify='center' gap='2rem'>
+          <Flex align={'center'} justify='center' gap='3rem' direction={['column-reverse', 'column-reverse', 'row']}>
+            <Box flex='1'>
+              <Image width={100} height={100} alt='...' src='/images/raise/customize.svg' className='flex-1 rounded-xl h-full w-full' />
+            </Box>
+
+            <Box flex='1' maxW='600px'>
+              <Text textStyle={'h2'}>Customize your Raise to Meet your needs</Text>
+              <Text>
+                Explore flexible fund raising options and customize them to meet the unique needs of your startup, from pre-seed to Series C.
+              </Text>
+            </Box>
+          </Flex>
+
+          <Flex align={'center'} justify='center' gap='2rem' direction={['column', 'column', 'row']}>
             <Box flex='1' maxW='600px'>
               <Text textStyle={'h2'}>
                 Raise Funds Confidently with Current <br /> Information
               </Text>
-              <Text>Access real-time, data-driven insights into the startup ecosystem - so you can make informed decisions about fundraising and growth strategies.</Text>
+              <Text>
+                Access real-time, data-driven insights into the startup ecosystem - so you can make informed decisions about fundraising and growth
+                strategies.
+              </Text>
             </Box>
-
-            <Image width={100} height={100} alt='...' src='/images/raise/raise-fund.svg' className='flex-1 rounded-xl' />
+            <Box flex={1}>
+              <Image width={100} height={100} alt='...' src='/images/raise/raise-fund.svg' className='rounded-xl w-full h-full' />
+            </Box>
           </Flex>
         </Stack>
       </Box>

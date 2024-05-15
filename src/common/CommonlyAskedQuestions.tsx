@@ -11,12 +11,12 @@ type TQuestionsProps = {
 export function CommonlyAskedQuestions({ questions }: TQuestionsProps) {
   return (
     <PageWrapper>
-      <Flex gap='1rem' px={'5%'}>
+      <Flex direction={['column', 'column', 'row']} gap='1rem' px={['5%']}>
         <Text textStyle={'h2'} flex='1'>
           Commonly asked questions
         </Text>
 
-        <Accordion as={Stack} spacing='8' mt='3rem' flex='1' mx='auto' allowToggle>
+        <Accordion as={Stack} spacing='8' mt='3rem' flex='1' mx={[null, null, 'auto']} allowToggle>
           {questions.map((que, index) => (
             <AccordionItem key={index} border='none' borderRadius={'8px'} borderBottom='1px solid #eee'>
               <h2>

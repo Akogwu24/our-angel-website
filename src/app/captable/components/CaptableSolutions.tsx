@@ -22,6 +22,7 @@ export function CaptableSolutions({}: typeCaptableSolutionsProps) {
             subheading='Automated cap table software'
             body={<AutomatedCapTable />}
             imageUrl='/images/captable/1.svg'
+            direction={['column', 'column', 'row']}
           />
           <ImageTextContainer
             heading='Real Time Update'
@@ -31,6 +32,7 @@ export function CaptableSolutions({}: typeCaptableSolutionsProps) {
             }
             imageUrl='/images/captable/2.svg'
             order={1}
+            direction={['column-reverse', 'column-reverse', 'row']}
           />
 
           <ImageTextContainer
@@ -40,6 +42,7 @@ export function CaptableSolutions({}: typeCaptableSolutionsProps) {
               "OurAngels is designed with simplicity in mind, making it easy for founders and entrepreneurs to navigate and understand their cap tables. You don't need to be a finance expert to use our platform effectively. We've created an intuitive user interface that allows you to manage your cap table effortlessly."
             }
             imageUrl='/images/captable/3.svg'
+            direction={['column', 'column', 'row']}
           />
           <ImageTextContainer
             heading='Robust Reporting'
@@ -49,6 +52,7 @@ export function CaptableSolutions({}: typeCaptableSolutionsProps) {
             }
             imageUrl='/images/captable/4.svg'
             order={1}
+            direction={['column-reverse', 'column-reverse', 'row']}
           />
         </Stack>
       </Stack>

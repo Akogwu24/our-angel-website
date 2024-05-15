@@ -23,7 +23,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
       h2: {
         color: '#121212',
         fontWeight: '500',
-        fontSize: ['25px', '28px', '32px', '38px'],
+        fontSize: ['24px', '28px', '32px', '38px'],
       },
       h3: {
         color: '#121212',

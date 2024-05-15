@@ -16,7 +16,7 @@ export function CaptableHero() {
           rightIcon={<ArrowRight />}
         />
 
-        <SimpleGrid as='section' my={20} columns={[3]} gap='2rem'>
+        <SimpleGrid as='section' my={20} minChildWidth={250} gap='2rem'>
           <AllInOneSolutionCard
             head='Share team inboxes'
             img='/images/captable/Featured.svg'
