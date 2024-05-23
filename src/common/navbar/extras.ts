@@ -5,13 +5,30 @@ import { TbCoins, TbReport } from 'react-icons/tb';
 import { LuBarChartBig } from 'react-icons/lu';
 import { MdOutlineRealEstateAgent } from 'react-icons/md';
 
-export const featuredTools = [
+export const userTypeTools = [
   {
     title: 'Startup',
     subtitle: 'See all featured products here',
     icon: IoRocketOutline,
-    path: PUBLIC_ROUTES.STARTUPS,
+    // path: PUBLIC_ROUTES.STARTUPS,
   },
+
+  {
+    title: 'Investors',
+    subtitle: 'See all featured products here',
+    icon: MdOutlineRealEstateAgent,
+    // path: PUBLIC_ROUTES.INVEST_IN_VENTURE_FUNDS,
+  },
+
+  {
+    title: 'Fund Managers',
+    subtitle: 'See all featured products here',
+    icon: TbCoins,
+    // path: PUBLIC_ROUTES.FUND_MANAGEMENT,
+  },
+];
+
+export const featuredTools = [
   {
     title: 'Raise',
     subtitle: 'Learn how our customers are making big changes.',
@@ -24,12 +41,7 @@ export const featuredTools = [
     icon: Briefcase,
     path: PUBLIC_ROUTES.CAPTABLE,
   },
-  {
-    title: 'Investors',
-    subtitle: 'See all featured products here',
-    icon: MdOutlineRealEstateAgent,
-    path: PUBLIC_ROUTES.INVEST_IN_VENTURE_FUNDS,
-  },
+
   {
     title: '409A Valuation',
     subtitle: 'Learn how our customers are making big changes.',
@@ -42,12 +54,7 @@ export const featuredTools = [
     icon: TbReport,
     path: PUBLIC_ROUTES.FINANCE_REPORTING,
   },
-  {
-    title: 'Fund Managers',
-    subtitle: 'See all featured products here',
-    icon: TbCoins,
-    path: PUBLIC_ROUTES.FUND_MANAGEMENT,
-  },
+
   {
     title: 'Incorporation',
     subtitle: 'Learn how our customers are making big changes.',

@@ -12,22 +12,24 @@ type TFeaturedToolCardProps = {
   title: string;
   subtitle: string;
   icon: Icon | IconType;
-  path: string;
+  path?: string;
 };
 
-export default function FeaturedToolCard({ tool }: { tool: TFeaturedToolCardProps }) {
+export default function FeaturedToolCard({ tool, p }: { p?: number; tool: TFeaturedToolCardProps }) {
   return (
     <HStack
       as={Link}
-      href={tool?.path}
+      href={tool?.path || '#'}
       gap='0.5rem'
       w={280}
       p={2}
+      py={p || 2}
       transition={'all 600ms ease-in'}
       borderRadius={4}
       _hover={{ bg: 'gray.100' }}
       role='group'
       overflowX='hidden'
+      align='start'
     >
       <ChakraIcon boxSize={'6'} borderRadius={4} p='4px' as={tool?.icon || IoRocketOutline} bg='blue.50' />
       <Box>
@@ -37,6 +39,7 @@ export default function FeaturedToolCard({ tool }: { tool: TFeaturedToolCardProp
         </Text>
       </Box>
       <ChakraIcon
+        alignSelf={'center'}
         ml='auto'
         as={ArrowRight}
         boxSize={5}

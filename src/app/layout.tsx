@@ -5,6 +5,9 @@ import { Providers } from './providers';
 import Navbar from '@/common/navbar/Navbar';
 import Footer from '@/common/footer/Footer';
 
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {

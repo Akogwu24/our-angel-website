@@ -5,9 +5,6 @@ import { Box, Flex, Image, Stack, Text } from '@chakra-ui/react';
 import React from 'react';
 import Slider from 'react-slick';
 
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-
 type TDiscoverOurServicesTabContent = {
   images: string[];
   heading: string;
@@ -15,7 +12,6 @@ type TDiscoverOurServicesTabContent = {
 };
 
 export default function DiscoverOurServicesTabContent({ heading, images, subheading }: TDiscoverOurServicesTabContent) {
-  console.log('images', images);
   const settings = {
     dots: true,
     infinite: true,
@@ -24,7 +20,7 @@ export default function DiscoverOurServicesTabContent({ heading, images, subhead
     autoplay: true,
     speed: 3000,
     autoplaySpeed: 3000,
-    cssEase: '',
+    cssEase: 'ease-in-out',
   };
 
   return (

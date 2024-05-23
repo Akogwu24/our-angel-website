@@ -34,7 +34,7 @@ export function ProgressBottomBorderWithSwappingImages({ images, data, sectionHe
   useEffect(() => {
     const interval = setInterval(() => {
       setStartFill(startFill < data?.length - 1 ? startFill + 1 : 0);
-    }, 10000);
+    }, 5000);
 
     return () => {
       clearInterval(interval);
@@ -71,7 +71,7 @@ export function ProgressBottomBorderWithSwappingImages({ images, data, sectionHe
               </Flex>
             ))}
           </Stack>
-          <Box pos={'relative'} h='full' flex={1}>
+          <Box pos={'relative'} maxH='full' flex={1} h={[500]}>
             <motion.img
               src={images[startFill] || '/images/home/Content2.svg'}
               alt='group'

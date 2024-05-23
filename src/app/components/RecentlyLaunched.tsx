@@ -1,19 +1,21 @@
 import { OutlinedButton } from '@/common/CustomButtons';
-import { Box, Flex, HStack, SimpleGrid, Stack, Tab, TabList, TabPanel, TabPanels, Tabs, Text } from '@chakra-ui/react';
+import { Box, Flex, HStack, Stack, Tab, TabList, TabPanel, TabPanels, Tabs, Text } from '@chakra-ui/react';
 import { ArrowRight } from 'iconsax-react';
 import React from 'react';
-import { RecentLaunchCard } from './RecentLaunchCard';
 import Image from 'next/image';
 import { PageWrapper } from '@/common/PageWrapper';
 import { fundManagerSlideImages, investorSlideImages, startupSlideImages, swappedImages, technologyTailored } from './extras';
 import DiscoverOurServicesTabContent from './DiscoverOurServicesTabContent';
 import { ProgressBottomBorderWithSwappingImages } from '@/common/ProgressBottomBorderWithSwappingImages';
+import { RecentlyLunchedCarousel } from './RecentlyLunchedCarousel';
+
+const paddingVal = ['10px'];
 
 export const RecentlyLaunched = async () => {
   return (
     <Stack>
       <PageWrapper>
-        <HStack justify={'space-between'}>
+        <HStack justify={'space-between'} px={paddingVal}>
           <Text textStyle={'h2'}>Recently Launched </Text>
           <OutlinedButton display={['none', 'none', 'flex']} rightIcon={<ArrowRight />}>
             View
@@ -23,21 +25,7 @@ export const RecentlyLaunched = async () => {
           </OutlinedButton>
         </HStack>
 
-        <SimpleGrid display={['grid', 'grid', 'none']} gap='2rem' my={4}>
-          {[...Array(1)].map((_, i) => (
-            <RecentLaunchCard key={i} />
-          ))}
-        </SimpleGrid>
-        <SimpleGrid display={['none', 'none', 'grid', 'none']} columns={[2]} gap='2rem' my={4}>
-          {[...Array(2)].map((_, i) => (
-            <RecentLaunchCard key={i} />
-          ))}
-        </SimpleGrid>
-        <SimpleGrid display={['none', 'none', 'none', 'grid']} columns={[3]} gap='2rem' my={4}>
-          {[...Array(3)].map((_, i) => (
-            <RecentLaunchCard key={i} />
-          ))}
-        </SimpleGrid>
+        <RecentlyLunchedCarousel paddingVal={paddingVal} />
 
         <Flex my={20} gap='2rem' align={'center'} direction={['column', 'column', 'row']}>
           <Box h='full' flex={1}>
@@ -80,10 +68,9 @@ export const RecentlyLaunched = async () => {
         </PageWrapper>
       </Box>
       <ProgressBottomBorderWithSwappingImages sectionHeading='Technology Tailored for Investors' data={technologyTailored} images={swappedImages} />
-      {/* <TechnologyTailoredForInvestors /> */}
 
       <PageWrapper>
-        <Stack my={[0, 10]} borderRadius={10} p={[5, 10]} bg='#F3F2EE' align='center'>
+        <Stack my={[0, 10]} borderRadius={10} py={[5]} px={[2, 5, 10]} bg='#F3F2EE' align='center'>
           <Text textStyle={'h2'} fontWeight={500}>
             Discover Our Services
           </Text>
@@ -96,9 +83,8 @@ export const RecentlyLaunched = async () => {
             <TabList
               bg='#13213E'
               mx='auto'
-              justifyContent={['space-betwen', 'center']}
-              justifyItems={'center'}
-              w={['full', 'fit-content']}
+              maxW={['350px', '360px', '380px']}
+              justifyContent={['space-between']}
               borderRadius={24}
               color='white'
               h='50px'
@@ -107,7 +93,9 @@ export const RecentlyLaunched = async () => {
             >
               <Tab {...tabStyles}>Startups</Tab>
               <Tab {...tabStyles}>Investors</Tab>
-              <Tab {...tabStyles}>Fund managers</Tab>
+              <Tab {...tabStyles} w={'fit-content'}>
+                Fund managers
+              </Tab>
             </TabList>
 
             <TabPanels>
@@ -146,5 +134,7 @@ const tabStyles = {
   fontSize: [14, 15],
   px: [2, 3, 5],
   color: 'white',
+  // flex: 1,
+  // w: '100%',
   _selected: { color: '#333', bg: 'white', borderRadius: 20 },
 };

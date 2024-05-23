@@ -1,8 +1,5 @@
-'use client';
-
 import { Box, Flex, Icon, Stack, Text } from '@chakra-ui/react';
 import Image from 'next/image';
-
 import React from 'react';
 import { BsArrowUpRight } from 'react-icons/bs';
 

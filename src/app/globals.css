@@ -10,8 +10,16 @@ body {
 }
 
 .chakra-popover__popper {
-  transform: translate3d(-440px, 32px, 0px) !important;
+  /* transform: translate3d(0px, 32px, 0px) !important; */
+  /* transform: translate3d(-440px, 32px, 0px) !important; */
+  width: 100% !important;
 }
+
+/* @media only screen and (max-width: 1200px) {
+  .chakra-popover__popper {
+    transform: translate3d(-300px, 32px, 0px) !important;
+  }
+} */
 
 .progress-container {
   width: 100%;
@@ -31,7 +39,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  animation: fillAnimation 10s linear forwards;
+  animation: fillAnimation 5s linear forwards;
 }
 @keyframes fillAnimation {
   0% {

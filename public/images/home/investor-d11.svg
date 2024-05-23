@@ -1,7 +1,7 @@
 <svg width="792" height="545" viewBox="0 0 792 545" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect x="232.899" y="227" width="427.202" height="231" rx="22.9695" fill="white" fill-opacity="0.46"/>
 <g filter="url(#filter0_d_1177_8507)">
-<rect x="250.041" y="245.274" width="392.918" height="194.452" rx="20" fill="white" shape-rendering="crispEdges"/>
+<rect x="250.041" y="245.274" width="392.918" height="194.452" rx="20" fill="url(#paint0_linear_1177_8507)" shape-rendering="crispEdges"/>
 <circle cx="282.677" cy="270.189" r="17.1947" fill="#EDEBFE"/>
 <path d="M290.045 274.216V276.222H276.671V274.216C276.671 273.848 276.972 273.547 277.34 273.547H289.376C289.744 273.547 290.045 273.848 290.045 274.216Z" fill="#7E3AF2" stroke="#7E3AF2" stroke-width="1.00302" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M280.015 268.866H278.678V273.547H280.015V268.866Z" fill="#7E3AF2"/>
@@ -126,5 +126,9 @@
 <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1177_8507"/>
 <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1177_8507" result="shape"/>
 </filter>
+<linearGradient id="paint0_linear_1177_8507" x1="446.5" y1="245.274" x2="446.5" y2="439.726" gradientUnits="userSpaceOnUse">
+<stop stop-color="#EEF3FD"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
 </defs>
 </svg>

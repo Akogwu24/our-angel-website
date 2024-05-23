@@ -5,12 +5,14 @@ import { OutlinedButton, PrimaryLightButton } from '@/common/CustomButtons';
 import { ArrowRight } from 'iconsax-react';
 import { PageWrapper } from '@/common/PageWrapper';
 import Image from 'next/image';
+import { WhatsNewCarousel } from './WhatsNewCarousel';
 
+const paddingVal = ['5px'];
 export function WhatsNewOnOurAngel() {
   return (
     <PageWrapper>
       <Stack as='section' my={10}>
-        <HStack justify={'space-between'} my={'1rem'}>
+        <HStack justify={'space-between'} my={'1rem'} px={paddingVal}>
           <Text textStyle={'h2'}>What’s New On OurAngel </Text>
           <OutlinedButton size='sm' rightIcon={<ArrowRight />} display={['none', 'none', 'flex']}>
             View
@@ -19,23 +21,7 @@ export function WhatsNewOnOurAngel() {
             <ArrowRight size={18} />
           </OutlinedButton>
         </HStack>
-        <SimpleGrid minChildWidth={[280]} gap='2rem'>
-          <WhatsNewCard
-            image='/images/home/what-new1.png'
-            heading='Make everyday a payday'
-            subheading='Collaboration can make our teams stronger, and our individual designs better.'
-          />
-          <WhatsNewCard
-            image='/images/home/what-new2.png'
-            heading='Announcing our $10m series'
-            subheading='JavaScript frameworks make development easy with extensive features and functionalities.'
-          />
-          <WhatsNewCard
-            image='/images/home/what-new3.png'
-            heading='Creating a better CX Community'
-            subheading='Starting a community doesn’t need to be complicated, but how do you get started?'
-          />
-        </SimpleGrid>
+        <WhatsNewCarousel paddingVal={paddingVal} />{' '}
       </Stack>
 
       <HStack pos={'relative'} bg='extremethemeDarkBlue' pl={[0, 5]} pt={[0, 5]} h={[300, 350]} color='white' my={10} borderRadius={5}>
@@ -50,7 +36,7 @@ export function WhatsNewOnOurAngel() {
         </Stack>
 
         <Image
-          className='h-[250px] w-[300px] lg:w-[400px]  xl:w-[600px] self-end self absolute md:static'
+          className='h-[250px] sm:w-[200px]  md:w-[300px] lg:w-[400px]  xl:w-[600px] self-end absolute right-0 md:static'
           alt='Build With OurAngel'
           width={400}
           height={300}
