@@ -31,7 +31,7 @@ export const WhatWeDo = () => {
       <Text mt={10} textStyle={'h2'}>
         What we do
       </Text>
-      <SimpleGrid as='section' w='full' minChildWidth={250} gap='2rem' rowGap={['3rem']} justifyItems={'center'}>
+      <SimpleGrid as='section' w='full' columns={[1, 2, 2, 4]} gap='3rem'>
         <WhatWeDoCard
           icon={Notepad2}
           head='Easy Business Registration'

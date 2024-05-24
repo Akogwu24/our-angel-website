@@ -64,7 +64,9 @@ export function ProgressBottomBorderWithSwappingImages({ images, data, sectionHe
                     <Text textStyle={'h3'} fontWeight={500} fontSize={['1.2rem']} my={2}>
                       {item.heading}
                     </Text>
-                    <Text fontSize={15}>{item.subheading}</Text>
+                    <Text fontSize={15} as='article'>
+                      {item.subheading}
+                    </Text>
                   </Box>
                   <ProgressbarLine fillStart={startFill === i} />
                 </Stack>

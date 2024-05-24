@@ -15,13 +15,15 @@ type TFeaturedToolCardProps = {
   path?: string;
 };
 
-export default function FeaturedToolCard({ tool, p }: { p?: number; tool: TFeaturedToolCardProps }) {
+export default function FeaturedToolCard({ tool, p, w }: { w?: string[]; p?: number; tool: TFeaturedToolCardProps }) {
   return (
     <HStack
       as={Link}
       href={tool?.path || '#'}
       gap='0.5rem'
-      w={280}
+      w={w || '100%'}
+      minW={200}
+      maxW={280}
       p={2}
       py={p || 2}
       transition={'all 600ms ease-in'}

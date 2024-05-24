@@ -1,7 +1,7 @@
 'use client';
 
 import { DarkPrimaryButton } from '@/common/CustomButtons';
-import { Box, Flex, Image, Stack, Text } from '@chakra-ui/react';
+import { Box, Flex, Grid, Image, Stack, Text } from '@chakra-ui/react';
 import React from 'react';
 import Slider from 'react-slick';
 
@@ -33,7 +33,7 @@ export default function DiscoverOurServicesTabContent({ heading, images, subhead
         </DarkPrimaryButton>
       </Stack>
 
-      <Box flex='1' w={['300px', '380px']} h={['300px']} pos={'relative'} overflow={'hidden'}>
+      <Box flex='1' w={['300px', '380px']} pos={'relative'} overflow={'hidden'}>
         <Slider {...settings}>
           {images?.map((img) => (
             <Flex key={img}>

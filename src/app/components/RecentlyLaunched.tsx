@@ -35,10 +35,10 @@ export const RecentlyLaunched = async () => {
             <Text fontSize={15} color='gray.500'>
               Diversification of portfolio
             </Text>
-            <Text textStyle={'h2'} fontSize={'2.5rem'} lineHeight={1.2}>
+            <Text textStyle={'h2'} fontSize={['1.8rem', null, '2rem', '2.5rem']} lineHeight={1.2}>
               Strategically Diversify <br /> Across Sectors and Stages
             </Text>
-            <Text>
+            <Text as='article'>
               Maximize your potential returns by diversifying your investments across multiple sectors and stages. From early-stage startups in the
               vibrant fintech world to established ventures in the rapidly evolving AI and biotech industries, OurAngels makes it easy to build a
               resilient and dynamic portfolio that balances risk and reward.
@@ -54,7 +54,7 @@ export const RecentlyLaunched = async () => {
               <Text textStyle={'h2'} lineHeight={1.2}>
                 Back Winning Teams: Invest Where It Counts
               </Text>
-              <Text>
+              <Text as='article'>
                 Every startup on OurAngel undergoes a rigorous vetting process, ensuring you&apos;re investing in companies with not just
                 groundbreaking ideas but also solid business models, strong teams, and the potential for substantial growth. Our comprehensive
                 evaluation process means you&apos;re backing ventures ready to make an impact.
@@ -74,7 +74,7 @@ export const RecentlyLaunched = async () => {
           <Text textStyle={'h2'} fontWeight={500}>
             Discover Our Services
           </Text>
-          <Text align='center' maxW='800px'>
+          <Text align='center' maxW='800px' as='article'>
             At Ourangels, we cater to a diverse community of startups, investors, and fund managers, offering specialized services to meet the unique
             needs of each. Explore what we can do for you:
           </Text>

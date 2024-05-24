@@ -1,14 +1,12 @@
 'use client';
 
 import {
-  Box,
   Flex,
   Popover,
   PopoverBody,
   PopoverCloseButton,
   PopoverContent,
   PopoverTrigger,
-  Portal,
   SimpleGrid,
   Stack,
   Tab,
@@ -24,6 +22,7 @@ import { GetStartedVideo } from './GetStartedVideo';
 import { featuredTools, userTypeTools } from './extras';
 import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
+import { PageWrapper } from '../PageWrapper';
 
 const tabStyles = { p: 0, border: 0, outline: 0 };
 
@@ -46,54 +45,49 @@ export const ProductsPopOver = () => {
         </PopoverTrigger>
         {/* <Portal> */}
         <PopoverContent mt={3} ml={['1%']} w={['98vw']} top={-14}>
-          <PopoverCloseButton right='0' top={0} />
+          <PopoverCloseButton bg='gray.200' right='1' top={0} />
           {/* <PopoverArrow /> */}
-          <PopoverBody as={Flex} gap='2rem' direction={['column', 'row']} border={'none'} outline={'none'}>
-            <Tabs mt='1rem' variant='unstyled' orientation={'vertical'} direction='rtl'>
-              <TabList gap={5} borderRight={'1px solid #eee'} pr={[0, 4]}>
-                <Text fontSize={13} color='gray.500'>
-                  PRODUCTS
-                </Text>
-                {userTypeTools?.map((tool, i) => (
-                  <Tab key={i} textAlign='start' {...tabStyles}>
-                    <FeaturedToolCard p={2} tool={tool} />
-                  </Tab>
-                ))}
-              </TabList>
+          <PageWrapper pr={['1% !important']} pl={['0% !important']}>
+            <PopoverBody as={Flex} gap='2rem' direction={['column', 'row']} border={'none'} outline={'none'}>
+              <Tabs mt='1rem' variant='unstyled' orientation={'vertical'} direction='rtl'>
+                <TabList gap={5} borderRight={'1px solid #eee'} pr={[0, 0, 0, 4]}>
+                  <Text fontSize={13} color='gray.500'>
+                    PRODUCTS
+                  </Text>
+                  {userTypeTools?.map((tool, i) => (
+                    <Tab key={i} textAlign='start' {...tabStyles}>
+                      <FeaturedToolCard p={2} tool={tool} w={['100%', '100%', '220px', '280px']} />
+                    </Tab>
+                  ))}
+                </TabList>
 
-              <Stack>
-                <Text pl={4} fontSize={13} color='gray.500'>
-                  FEATURED TOOLS
-                </Text>
+                <Stack>
+                  <Text pl={4} fontSize={13} color='gray.500'>
+                    FEATURED TOOLS
+                  </Text>
 
-                <TabPanels>
-                  <TabPanel>
-                    <Flex wrap='wrap'>
-                      <SimpleGrid gap='2rem' columns={[2]}>
-                        {featuredTools.map((tool, i) => (
-                          <FeaturedToolCard key={i} tool={tool} />
-                        ))}
-                      </SimpleGrid>
-                      <GetStartedVideo />
-                    </Flex>
-                  </TabPanel>
-                  <TabPanel>
-                    <p>two!</p>
-                  </TabPanel>
-                  <TabPanel>
-                    <p>three!</p>
-                  </TabPanel>
-                </TabPanels>
-              </Stack>
-            </Tabs>
-
-            {/* <SimpleGrid gap='2rem' columns={[3]}>
-              {featuredTools.map((tool, i) => (
-                <FeaturedToolCard key={i} tool={tool} />
-              ))}
-            </SimpleGrid>
-            <GetStartedVideo /> */}
-          </PopoverBody>
+                  <TabPanels>
+                    <TabPanel>
+                      <Flex wrap='wrap' w='100%'>
+                        <SimpleGrid gap='2rem' columns={[2]}>
+                          {featuredTools.map((tool, i) => (
+                            <FeaturedToolCard key={i} tool={tool} />
+                          ))}
+                        </SimpleGrid>
+                        <GetStartedVideo />
+                      </Flex>
+                    </TabPanel>
+                    <TabPanel>
+                      <p>two!</p>
+                    </TabPanel>
+                    <TabPanel>
+                      <p>three!</p>
+                    </TabPanel>
+                  </TabPanels>
+                </Stack>
+              </Tabs>
+            </PopoverBody>
+          </PageWrapper>
         </PopoverContent>
         {/* </Portal> */}
       </Popover>

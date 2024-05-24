@@ -1,4 +1,4 @@
-import { As, Box } from '@chakra-ui/react';
+import { As, Box, Text } from '@chakra-ui/react';
 import React, { ReactNode } from 'react';
 
 type TPageWrapperProps = {

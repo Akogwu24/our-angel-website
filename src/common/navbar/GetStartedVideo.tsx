@@ -23,7 +23,14 @@ export function GetStartedVideo() {
   // }, []);
 
   return (
-    <Flex direction={['row']} w={['100%', '100%', '100%', '200px']} columnGap={['1rem']} mx={[0, 0, 0, 4]} mt={[5, 5, 5, 0]}>
+    <Flex
+      direction={['row', 'row', 'row', 'row', 'column']}
+      w={['100%', '100%', '100%', '100%', '200px']}
+      maxW={['600']}
+      columnGap={['1rem']}
+      mx={[0, 0, 0, 4]}
+      mt={[5, 5, 5, 5, 0]}
+    >
       <iframe
         className='w-full flex-1 max-w-[250px]'
         src='https://www.youtube.com/embed/8Ij7A1VCB7I?si=uXJbOSx7It3bRJT_'

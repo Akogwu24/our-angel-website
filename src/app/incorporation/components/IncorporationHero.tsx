@@ -28,10 +28,10 @@ export function IncorporationHero({}: TIncorporationHeroProps) {
             </Text>
             <Text py={4}>Scan the international databases to find out if your desired business name is globally available.</Text>
 
-            <InputGroup size='md' bg='white' borderRadius={5}>
-              <Input pr='4.5rem' type={'email'} placeholder='Enter your email' />
+            <InputGroup size='lg' bg='white' borderRadius={5}>
+              <Input pr='4.5rem' />
               <InputRightElement width='6rem'>
-                <PrimaryLightButton mr={2} h='2rem' w='full'>
+                <PrimaryLightButton mr={2} h='2.5rem' w='full'>
                   Search
                 </PrimaryLightButton>
               </InputRightElement>
