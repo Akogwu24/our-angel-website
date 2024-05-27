@@ -68,20 +68,20 @@ export const investorsFeaturedTools = [
     title: 'Startups',
     subtitle: 'Learn how our customers are making big changes.',
     icon: MoneyRecive,
-    // path: PUBLIC_ROUTES.RAISE,
+    path: '#',
   },
   {
     title: 'Whishlist',
     subtitle: 'Learn how our customers are making big changes.',
     icon: Briefcase,
-    // path: PUBLIC_ROUTES.CAPTABLE,
+    path: '#',
   },
 
   {
     title: 'Venture Funds',
     subtitle: 'Learn how our customers are making big changes.',
     icon: LuBarChartBig,
-    // path: PUBLIC_ROUTES.VALUATIONS,
+    path: '#',
   },
 ];
 
@@ -125,12 +125,12 @@ export const fundManagersFeaturedTools = [
     title: 'Fund Management',
     subtitle: 'Learn how our customers are making big changes.',
     icon: MoneyRecive,
-    // path: PUBLIC_ROUTES.RAISE,
+    path: '#',
   },
   {
     title: 'Fund Tax',
     subtitle: 'Learn how our customers are making big changes.',
     icon: Briefcase,
-    // path: PUBLIC_ROUTES.CAPTABLE,
+    path: '#',
   },
 ];
