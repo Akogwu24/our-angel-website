@@ -62,3 +62,75 @@ export const featuredTools = [
     path: PUBLIC_ROUTES.INCORPORATION,
   },
 ];
+
+export const investorsFeaturedTools = [
+  {
+    title: 'Startups',
+    subtitle: 'Learn how our customers are making big changes.',
+    icon: MoneyRecive,
+    // path: PUBLIC_ROUTES.RAISE,
+  },
+  {
+    title: 'Whishlist',
+    subtitle: 'Learn how our customers are making big changes.',
+    icon: Briefcase,
+    // path: PUBLIC_ROUTES.CAPTABLE,
+  },
+
+  {
+    title: 'Venture Funds',
+    subtitle: 'Learn how our customers are making big changes.',
+    icon: LuBarChartBig,
+    // path: PUBLIC_ROUTES.VALUATIONS,
+  },
+];
+
+export const startupFeaturedTools = [
+  {
+    title: 'Raise',
+    subtitle: 'Learn how our customers are making big changes.',
+    icon: MoneyRecive,
+    path: PUBLIC_ROUTES.RAISE,
+  },
+  {
+    title: 'Cap table Management',
+    subtitle: 'Learn how our customers are making big changes.',
+    icon: Briefcase,
+    path: PUBLIC_ROUTES.CAPTABLE,
+  },
+
+  {
+    title: '409A Valuation',
+    subtitle: 'Learn how our customers are making big changes.',
+    icon: LuBarChartBig,
+    path: PUBLIC_ROUTES.VALUATIONS,
+  },
+  {
+    title: 'Financial Reporting',
+    subtitle: 'Learn how our customers are making big changes.',
+    icon: TbReport,
+    path: PUBLIC_ROUTES.FINANCE_REPORTING,
+  },
+
+  {
+    title: 'Incorporation',
+    subtitle: 'Learn how our customers are making big changes.',
+    icon: Building,
+    path: PUBLIC_ROUTES.INCORPORATION,
+  },
+];
+
+export const fundManagersFeaturedTools = [
+  {
+    title: 'Fund Management',
+    subtitle: 'Learn how our customers are making big changes.',
+    icon: MoneyRecive,
+    // path: PUBLIC_ROUTES.RAISE,
+  },
+  {
+    title: 'Fund Tax',
+    subtitle: 'Learn how our customers are making big changes.',
+    icon: Briefcase,
+    // path: PUBLIC_ROUTES.CAPTABLE,
+  },
+];
