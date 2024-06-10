@@ -28,7 +28,7 @@ const tabStyles = { p: 0, border: 0, outline: 0 };
 
 export const ProductsPopOver = () => {
   const pathname = usePathname();
-  const { isOpen, onToggle, onClose } = useDisclosure();
+  const { isOpen, onClose, onOpen } = useDisclosure();
 
   useEffect(() => {
     onClose();
@@ -37,19 +37,19 @@ export const ProductsPopOver = () => {
 
   return (
     <>
-      <Popover placement='bottom' isOpen={isOpen} onClose={onClose} closeOnBlur={false}>
+      <Popover placement='bottom' isOpen={isOpen} onClose={onClose} closeOnBlur={true}>
         <PopoverTrigger>
-          <Text onClick={onToggle} cursor={'pointer'}>
+          <Text onMouseOver={onOpen} cursor={'pointer'}>
             Products
           </Text>
         </PopoverTrigger>
         {/* <Portal> */}
-        <PopoverContent mt={3} ml={['1%']} w={['98vw']} top={-14}>
+        <PopoverContent mt={3} ml={['1%']} w={['98vw']} top={0} onMouseOver={onOpen} onMouseOut={onClose}>
           <PopoverCloseButton bg='gray.200' right='1' top={0} />
           {/* <PopoverArrow /> */}
           <PageWrapper pr={['1% !important']} pl={['0% !important']}>
             <PopoverBody as={Flex} gap='2rem' direction={['column', 'row']} border={'none'} outline={'none'}>
-              <Tabs mt='1rem' variant='unstyled' orientation={'vertical'} direction='rtl'>
+              <Tabs w='full' mt='1rem' variant='unstyled' orientation={'vertical'} direction='rtl'>
                 <TabList gap={5} borderRight={'1px solid #eee'} pr={[0, 0, 0, 4]}>
                   <Text fontSize={13} color='gray.500'>
                     PRODUCTS
@@ -66,9 +66,9 @@ export const ProductsPopOver = () => {
                     FEATURED TOOLS
                   </Text>
 
-                  <TabPanels>
-                    <TabPanel>
-                      <Flex wrap='wrap' w='100%'>
+                  <TabPanels w='full'>
+                    <TabPanel w='full'>
+                      <Flex direction={['column', 'column', 'column', 'column', 'row']} w='100%'>
                         <SimpleGrid gap='2rem' columns={[2]}>
                           {featuredTools.map((tool, i) => (
                             <FeaturedToolCard key={i} tool={tool} />

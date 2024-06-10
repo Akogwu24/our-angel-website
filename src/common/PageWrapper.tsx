@@ -1,4 +1,4 @@
-import { As, Box, Container, Text } from '@chakra-ui/react';
+import { As, Box } from '@chakra-ui/react';
 import React, { ReactNode } from 'react';
 
 type TPageWrapperProps = {
@@ -9,7 +9,7 @@ type TPageWrapperProps = {
 
 export function PageWrapper({ children, as, ...props }: TPageWrapperProps) {
   return (
-    <Box className=' w-full max-w-[1400px] mx-auto px-[4%]' as={as} {...props}>
+    <Box className='w-full max-w-[1350px] mx-auto px-[4%]' as={as} {...props}>
       {children}
     </Box>
   );

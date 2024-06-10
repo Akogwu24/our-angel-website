@@ -5,11 +5,12 @@ import React from 'react';
 import { PrimaryLightButton } from '../CustomButtons';
 import Image from 'next/image';
 import { PageWrapper } from '../PageWrapper';
-import { Flex, HStack, ListItem, Text, UnorderedList } from '@chakra-ui/react';
+import { Box, Flex, HStack, ListItem, Text, UnorderedList } from '@chakra-ui/react';
 import { ProductsPopOver } from './ProductsPopOver';
 import { MdMenu } from 'react-icons/md';
 import CustomDrawer from '../CustomDrawer';
 import { MobileNav, MobileNavFooter } from './MobileNav';
+import { ResourcesPopover } from './ResourcesPopover';
 
 async function getData() {
   const res = await fetch('https://jsonplaceholder.typicode.com/todos/1');
@@ -29,7 +30,7 @@ export default function Navbar() {
 
   // console.log(data);
   return (
-    <>
+    <Box as='header' shadow='sm'>
       <PageWrapper>
         <Flex as='nav' justify='space-between' py='5' align={'center'} display={['none', 'none', 'flex']}>
           <Link href={PUBLIC_ROUTES.HOME}>
@@ -43,8 +44,8 @@ export default function Navbar() {
             <ListItem as={Link} href={PUBLIC_ROUTES.PRICING}>
               Pricing
             </ListItem>
-            <ListItem as={Link} href={PUBLIC_ROUTES.RESOURCES}>
-              Resources
+            <ListItem position={'relative'}>
+              <ResourcesPopover />
             </ListItem>
           </HStack>
 
@@ -67,6 +68,6 @@ export default function Navbar() {
           </CustomDrawer>
         </Flex>
       </PageWrapper>
-    </>
+    </Box>
   );
 }

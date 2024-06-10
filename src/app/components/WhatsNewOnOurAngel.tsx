@@ -6,6 +6,7 @@ import { ArrowRight } from 'iconsax-react';
 import { PageWrapper } from '@/common/PageWrapper';
 import Image from 'next/image';
 import { WhatsNewCarousel } from './WhatsNewCarousel';
+import FooterBlueTopType2 from '@/common/FooterBlueTopType2';
 
 const paddingVal = ['5px'];
 export function WhatsNewOnOurAngel() {
@@ -23,8 +24,9 @@ export function WhatsNewOnOurAngel() {
         </HStack>
         <WhatsNewCarousel paddingVal={paddingVal} />{' '}
       </Stack>
+      <FooterBlueTopType2 />
 
-      <HStack pos={'relative'} bg='extremethemeDarkBlue' pl={[0, 5]} pt={[0, 5]} h={[300, 350]} color='white' my={10} borderRadius={5}>
+      {/* <HStack pos={'relative'} bg='extremethemeDarkBlue' pl={[0, 5]} pt={[0, 5]} h={[300, 350]} color='white' my={10} borderRadius={5}>
         <Stack flex='1' ml={'5%'}>
           <Text>Build With OurAngel</Text>
           <Text textStyle={'h2'} fontSize={['2.5rem']} lineHeight={[1.1, 1.2]} color='white'>
@@ -42,7 +44,7 @@ export function WhatsNewOnOurAngel() {
           height={300}
           src='/images/home/Group 5379.png'
         />
-      </HStack>
+      </HStack> */}
     </PageWrapper>
   );
 }

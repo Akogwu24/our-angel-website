@@ -25,14 +25,15 @@ export function GetStartedVideo() {
   return (
     <Flex
       direction={['row', 'row', 'row', 'row', 'column']}
-      w={['100%', '100%', '100%', '100%', '200px']}
-      maxW={['600']}
+      // w={['100%', '100%', '100%', '100%']}
+      // maxW={['600']}
       columnGap={['1rem']}
       mx={[0, 0, 0, 4]}
       mt={[5, 5, 5, 5, 0]}
+      flex={1}
     >
       <iframe
-        className='w-full flex-1 max-w-[250px]'
+        className='w-full flex-1 max-w-[250px] lg:min-h-[180px] lg:max-w-full object-cover'
         src='https://www.youtube.com/embed/8Ij7A1VCB7I?si=uXJbOSx7It3bRJT_'
         title='YouTube video player'
         allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
@@ -46,7 +47,7 @@ export function GetStartedVideo() {
         <Text fontWeight={400} fontSize={12}>
           Jump right in — get an overview of the basics and get started on building straight away.
         </Text>
-        <HStack color='rebeccapurple' pt={4}>
+        <HStack color='rebeccapurple' pt={[4]}>
           <Icon as={PlayCircle} />
           <Text as='small'>Watch video</Text>
         </HStack>

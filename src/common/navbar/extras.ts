@@ -1,9 +1,10 @@
 import { PUBLIC_ROUTES } from '@/constants/routes';
-import { Briefcase, MoneyRecive, Building } from 'iconsax-react';
+import { Briefcase, MoneyRecive, Building, MessageQuestion } from 'iconsax-react';
 import { IoRocketOutline } from 'react-icons/io5';
 import { TbCoins, TbReport } from 'react-icons/tb';
 import { LuBarChartBig } from 'react-icons/lu';
-import { MdOutlineRealEstateAgent } from 'react-icons/md';
+import { MdOutlineRealEstateAgent, MdQuestionMark } from 'react-icons/md';
+import { PiNewspaperBold } from 'react-icons/pi';
 
 export const userTypeTools = [
   {
@@ -131,6 +132,27 @@ export const fundManagersFeaturedTools = [
     title: 'Fund Tax',
     subtitle: 'Learn how our customers are making big changes.',
     icon: Briefcase,
+    path: '#',
+  },
+];
+
+export const resourcesTools = [
+  {
+    title: 'Blog',
+    subtitle: 'See all featured products here',
+    icon: PiNewspaperBold,
+    path: '/blog',
+  },
+  {
+    title: 'Help Center',
+    subtitle: 'See all featured products here',
+    icon: MessageQuestion,
+    path: '#',
+  },
+  {
+    title: 'FAQs',
+    subtitle: 'See all featured products here',
+    icon: MdQuestionMark,
     path: '#',
   },
 ];

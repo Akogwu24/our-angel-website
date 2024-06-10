@@ -1,5 +1,5 @@
 import { PUBLIC_ROUTES } from '@/constants/routes';
-import { Grid, GridItem, HStack, ListItem, SimpleGrid, Stack, Text, UnorderedList } from '@chakra-ui/react';
+import { Grid, GridItem, HStack, ListItem, Stack, Text, UnorderedList } from '@chakra-ui/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <>
       <PageWrapper>
-        <Text maxW='1100px' px='1%' mx='auto' my={5}>
+        <Text as='article' maxW='1100px' px='1%' mx='auto' my={5}>
           The information on this website is provided for informational purposes only and should not be considered a recommendation for any
           investment, service, product, or advice. It does not constitute an offer or solicitation for any securities or investment opportunities.
           Before making any investment decisions, ensure that you thoroughly review and understand the associated risks and legal documents. We
