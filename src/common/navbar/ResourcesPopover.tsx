@@ -15,7 +15,7 @@ export function ResourcesPopover() {
           Resources
         </Text>
       </PopoverTrigger>
-      <PopoverContent mt={4} onMouseOver={onOpen} onMouseOut={onClose}>
+      <PopoverContent className='no-border' mt={4} onMouseOver={onOpen} onMouseOut={onClose}>
         <PopoverCloseButton />
         <PopoverBody>
           <Text fontSize={13} mb={4} color='gray.500'>

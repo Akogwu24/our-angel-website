@@ -146,3 +146,13 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+.no-border {
+  border: none !important;
+  box-shadow: none !important;
+  box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.1) !important;
+}
+
+.active-link {
+  background: #f9f8f8b0;
+}

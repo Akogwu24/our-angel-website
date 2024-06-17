@@ -1,31 +1,27 @@
-'use client';
-
-import { PUBLIC_ROUTES } from '@/constants/routes';
-import { Box, HStack, Icon as ChakraIcon, Text, IconProps, position } from '@chakra-ui/react';
+import { useEffect, useState } from 'react';
+import { HStack, Text, Icon as ChakraIcon, Box } from '@chakra-ui/react';
 import { ArrowRight, Icon } from 'iconsax-react';
-import Link from 'next/link';
-import React from 'react';
+import { IconType } from 'react-icons';
 import { IoRocketOutline } from 'react-icons/io5';
-import { IconType } from 'react-icons/lib';
 
-type TFeaturedToolCardProps = {
-  title: string;
-  subtitle: string;
-  icon: Icon | IconType;
-  path?: string;
+type TCustomNavLinkProps = {
+  tool: {
+    title: string;
+    subtitle: string;
+    icon: Icon | IconType;
+    path?: string;
+  };
+  active: boolean;
 };
 
-export default function FeaturedToolCard({ tool, p, w }: { w?: string[]; p?: number; tool: TFeaturedToolCardProps }) {
+export const CustomNavLink = ({ tool, active }: TCustomNavLinkProps) => {
   return (
     <HStack
-      as={Link}
-      href={tool?.path || '#'}
-      gap='0.5rem'
-      w={w || '100%'}
+      className={active ? 'active-link' : ''}
       minW={200}
       maxW={280}
       p={2}
-      py={p || 2}
+      py={2}
       transition={'all 600ms ease-in'}
       borderRadius={4}
       _hover={{ bg: 'gray.100' }}
@@ -33,7 +29,7 @@ export default function FeaturedToolCard({ tool, p, w }: { w?: string[]; p?: num
       overflowX='hidden'
       align='start'
     >
-      <ChakraIcon boxSize={'6'} borderRadius={4} p='4px' as={tool?.icon || IoRocketOutline} bg='#F3F4F6' />
+      <ChakraIcon as={tool?.icon || IoRocketOutline} boxSize={'6'} borderRadius={4} p='4px' bg='#F3F4F6' />
       <Box>
         <Text fontWeight={500}>{tool?.title}</Text>
         <Text fontSize={13} fontWeight={400}>
@@ -52,4 +48,4 @@ export default function FeaturedToolCard({ tool, p, w }: { w?: string[]; p?: num
       />
     </HStack>
   );
-}
+};

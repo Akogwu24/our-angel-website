@@ -11,21 +11,21 @@ export const userTypeTools = [
     title: 'Startup',
     subtitle: 'See all featured products here',
     icon: IoRocketOutline,
-    // path: PUBLIC_ROUTES.STARTUPS,
+    path: PUBLIC_ROUTES.STARTUPS,
   },
 
   {
     title: 'Investors',
     subtitle: 'See all featured products here',
     icon: MdOutlineRealEstateAgent,
-    // path: PUBLIC_ROUTES.INVEST_IN_VENTURE_FUNDS,
+    path: PUBLIC_ROUTES.INVEST_IN_VENTURE_FUNDS,
   },
 
   {
     title: 'Fund Managers',
     subtitle: 'See all featured products here',
     icon: TbCoins,
-    // path: PUBLIC_ROUTES.FUND_MANAGEMENT,
+    path: PUBLIC_ROUTES.FUND_MANAGEMENT,
   },
 ];
 
