@@ -18,7 +18,7 @@ import {
 } from '@chakra-ui/react';
 import FeaturedToolCard from './FeaturedToolCard';
 import { GetStartedVideo } from './GetStartedVideo';
-import { featuredTools, fundManagersFeaturedTools, investorsFeaturedTools, startupFeaturedTools, userTypeTools } from './extras';
+import { featuredTools, fundManagersFeaturedTools, investorsFeaturedTools, userTypeTools } from './extras';
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { PageWrapper } from '../PageWrapper';
@@ -38,16 +38,13 @@ export const ProductsPopOver = () => {
 
   return (
     <>
-      <Popover placement='bottom' isOpen={true} onClose={onClose} closeOnBlur={true}>
+      <Popover placement='bottom' isOpen={isOpen} onClose={onClose} closeOnBlur={true}>
         <PopoverTrigger>
           <Text onMouseOver={onOpen} cursor={'pointer'}>
             Products
           </Text>
         </PopoverTrigger>
-        {/* <Portal> */}
-        <PopoverContent className='no-border' mt={3} ml={['1%']} w={['98vw']} top={0} onMouseOver={onOpen} onMouseOut={onClose}>
-          {/* <PopoverCloseButton bg='gray.200' right='1' top={0} /> */}
-          {/* <PopoverArrow /> */}
+        <PopoverContent className='no-border' mt={3} w={['100vw']} top={0} onMouseOver={onOpen} onMouseOut={onClose}>
           <PageWrapper pr={['1% !important']} pl={['0% !important']}>
             <PopoverBody as={Flex} gap='2rem' direction={['column', 'row']} border={'none'} outline={'none'}>
               <Tabs w='full' mt='1rem' variant='unstyled' orientation={'vertical'} direction='rtl' onChange={setCurrentTab}>
@@ -103,8 +100,7 @@ export const ProductsPopOver = () => {
               </Tabs>
             </PopoverBody>
           </PageWrapper>
-        </PopoverContent>
-        {/* </Portal> */}
+        </PopoverContent>{' '}
       </Popover>
     </>
   );

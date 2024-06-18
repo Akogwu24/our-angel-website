@@ -41,7 +41,7 @@ export default function Navbar() {
             <ListItem position={'relative'}>
               <ProductsPopOver />
             </ListItem>
-            <ListItem as={Link} href={PUBLIC_ROUTES.PRICING}>
+            <ListItem as={Link} href={'#' || PUBLIC_ROUTES.PRICING}>
               Pricing
             </ListItem>
             <ListItem position={'relative'}>

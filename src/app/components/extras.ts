@@ -25,4 +25,4 @@ export const startupSlideImages = ['/images/home/startup-d2.svg', '/images/home/
 
 export const investorSlideImages = ['/images/home/investor-d1.svg', '/images/home/investor-d2.svg', '/images/home/investor-d3.svg'];
 
-export const fundManagerSlideImages = ['/images/home/fm-d1.svg', '/images/home/fm-d2.svg', '/images/home/fm-d3.svg'];
+export const fundManagerSlideImages = ['/images/home/fm-d1.svg', '/images/home/fm-d2.svg', '/images/home/fm-d33.svg'];
